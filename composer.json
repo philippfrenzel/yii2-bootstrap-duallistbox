@@ -1,0 +1,32 @@
+{
+	"name": "philippfrenzel/yii2bsduallistbox",
+	"description": "Yii2 Bootstrap Duallistbox Widget",
+	"keywords": ["yii2", "bootsrap", "duallistbox"],
+	"homepage": "http://www.frenzel.net/",
+	"type": "yii2-extension",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Philipp Frenzel",
+			"email": "philipp@frenzel.net",
+			"homepage": "http://www.frenzel.net/",
+			"role": "Developer"
+		}
+	],
+	"support": {
+		"source": "https://github.com/philippfrenzel/yii2-bootstrap-duallistbox"
+	},
+	"minimum-stability": "stable",
+	"require": {
+		"php": ">=5.5.0",
+		"yiisoft/yii2" : "*",
+		"yiisoft/yii2-jui": "*",
+		"bower-asset/bootstrap-duallistbox" : "3.*"
+	},
+	"require-dev": {
+		"codeception/codeception": "*"
+	},
+	"autoload": {
+		"psr-4": { "yii2bsduallistbox\\": "" }
+	}
+}
