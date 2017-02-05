@@ -40,48 +40,30 @@ Usage
 
 Quickstart Looks like this:
 
-```php
-  <?= \yii2bsduallistbox\yii2bsduallistbox::widget([
-      'events'=> $events,
-  ]);
-```
+```php 
 
-AJAX Usage
-==========
-If you wanna use ajax loader, this could look like this:
+use net\frenzel\yii2bsduallistbox\yii2bsduallistbox;
+...
+<?php
+    
+    $options = [
+        'multiple' => true,
+        'size' => 20,
+    ];
 
-```php
-<?= yii2bsduallistbox\yii2bsduallistbox::widget([
-      'options' => [
-        'lang' => 'de',
-        //... more options to be defined here!
-      ],
-      'ajaxEvents' => Url::to(['/timetrack/default/jsoncalendar'])
+    // echo Html::listBox($name, $selection, $items, $options);
+    echo yii2bsduallistbox::widget([
+        'name' => $name,
+        'selection' => $selection,
+        'items' => $items,
+        'options' => $options,
+        'clientOptions' => [
+            'moveOnSelect' => false,
+            'selectedListLabel' => 'Selected Items',
+            'nonSelectedListLabel' => 'Available Items',
+        ],
     ]);
 ?>
+
 ```
 
-and inside your referenced controller, the action should look like this:
-
-```php
-public function actionJsoncalendar($start=NULL,$end=NULL,$_=NULL){
-
-    \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
-
-    $times = \app\modules\timetrack\models\Timetable::find()->where(array('category'=>\app\modules\timetrack\models\Timetable::CAT_TIMETRACK))->all();
-
-    $events = array();
-
-    foreach ($times AS $time){
-      //Testing
-      $Event = new \yii2fullcalendar\models\Event();
-      $Event->id = $time->id;
-      $Event->title = $time->categoryAsString;
-      $Event->start = date('Y-m-d\TH:i:s\Z',strtotime($time->date_start.' '.$time->time_start));
-      $Event->end = date('Y-m-d\TH:i:s\Z',strtotime($time->date_end.' '.$time->time_end));
-      $events[] = $Event;
-    }
-
-    return $events;
-  }
-```
