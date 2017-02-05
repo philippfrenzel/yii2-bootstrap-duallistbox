@@ -8,7 +8,7 @@ Yii2 Extension by <philipp@frenzel.net>
 
 [![Latest Stable Version](https://poser.pugx.org/philippfrenzel/yii2bsduallistbox/v/stable.svg)](https://packagist.org/packages/philippfrenzel/yii2bsduallistbox)
 [![Build Status](https://travis-ci.org/philippfrenzel/yii2bsduallistbox.svg?branch=master)](https://travis-ci.org/philippfrenzel/yii2bsduallistbox)
-[![Code Climate](https://codeclimate.com/github/philippfrenzel/yii2bsduallistbox.png)](https://codeclimate.com/github/philippfrenzel/yii2bsduallistbox)
+[![Code Climate](https://codeclimate.com/github/philippfrenzel/yii2-bootstrap-duallistbox.png)](https://codeclimate.com/github/philippfrenzel/yii2-bootstrap-duallistbox)
 [![Version Eye](https://www.versioneye.com/php/philippfrenzel:yii2bsduallistbox/badge.svg)](https://www.versioneye.com/php/philippfrenzel:yii2bsduallistbox)
 [![License](https://poser.pugx.org/philippfrenzel/yii2bsduallistbox/license.svg)](https://packagist.org/packages/philippfrenzel/yii2bsduallistbox)
 
