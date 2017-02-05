@@ -51,7 +51,8 @@ class CoreAsset extends AssetBundle
      * @var array
      */
     public $depends = [
-        'yii\web\YiiAsset'
+        'yii\web\JqueryAsset',
+        'yii\bootstrap\BootstrapAsset',
     ];
 
     /**
