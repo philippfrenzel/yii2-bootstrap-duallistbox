@@ -41,9 +41,9 @@ Usage
 Quickstart Looks like this:
 
 ```php
-  <?= \yii2fullcalendar\yii2fullcalendar::widget(array(
+  <?= \yii2bsduallistbox\yii2bsduallistbox::widget([
       'events'=> $events,
-  ));
+  ]);
 ```
 
 AJAX Usage
@@ -51,7 +51,7 @@ AJAX Usage
 If you wanna use ajax loader, this could look like this:
 
 ```php
-<?= yii2fullcalendar\yii2fullcalendar::widget([
+<?= yii2bsduallistbox\yii2bsduallistbox::widget([
       'options' => [
         'lang' => 'de',
         //... more options to be defined here!

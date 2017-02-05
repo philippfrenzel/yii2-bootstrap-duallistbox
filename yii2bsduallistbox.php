@@ -8,7 +8,7 @@
  *
  */
 
-namespace yii2bsduallistbox;
+namespace net\frenzel\yii2bsduallistbox;
 
 use Yii;
 use yii\base\Model;
