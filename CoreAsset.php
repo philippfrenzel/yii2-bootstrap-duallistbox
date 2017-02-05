@@ -1,6 +1,6 @@
 <?php
 
-namespace namespace net\frenzel\yii2bsduallistbox;
+namespace net\frenzel\yii2bsduallistbox;
 
 use Yii;
 use yii\web\AssetBundle;
