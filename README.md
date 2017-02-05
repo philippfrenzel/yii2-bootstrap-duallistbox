@@ -6,11 +6,11 @@ For plugin options, pls. check out the site from the plugin creator
 
 Yii2 Extension by <philipp@frenzel.net>
 
-[![Latest Stable Version](https://poser.pugx.org/philippfrenzel/yii2fullcalendar/v/stable.svg)](https://packagist.org/packages/philippfrenzel/yii2fullcalendar)
-[![Build Status](https://travis-ci.org/philippfrenzel/yii2fullcalendar.svg?branch=master)](https://travis-ci.org/philippfrenzel/yii2fullcalendar)
-[![Code Climate](https://codeclimate.com/github/philippfrenzel/yii2fullcalendar.png)](https://codeclimate.com/github/philippfrenzel/yii2fullcalendar)
-[![Version Eye](https://www.versioneye.com/php/philippfrenzel:yii2fullcalendar/badge.svg)](https://www.versioneye.com/php/philippfrenzel:yii2fullcalendar)
-[![License](https://poser.pugx.org/philippfrenzel/yii2fullcalendar/license.svg)](https://packagist.org/packages/philippfrenzel/yii2fullcalendar)
+[![Latest Stable Version](https://poser.pugx.org/philippfrenzel/yii2bsduallistbox/v/stable.svg)](https://packagist.org/packages/philippfrenzel/yii2bsduallistbox)
+[![Build Status](https://travis-ci.org/philippfrenzel/yii2bsduallistbox.svg?branch=master)](https://travis-ci.org/philippfrenzel/yii2bsduallistbox)
+[![Code Climate](https://codeclimate.com/github/philippfrenzel/yii2bsduallistbox.png)](https://codeclimate.com/github/philippfrenzel/yii2bsduallistbox)
+[![Version Eye](https://www.versioneye.com/php/philippfrenzel:yii2bsduallistbox/badge.svg)](https://www.versioneye.com/php/philippfrenzel:yii2bsduallistbox)
+[![License](https://poser.pugx.org/philippfrenzel/yii2bsduallistbox/license.svg)](https://packagist.org/packages/philippfrenzel/yii2bsduallistbox)
 
 Installation
 ============
