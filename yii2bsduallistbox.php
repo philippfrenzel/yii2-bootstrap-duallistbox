@@ -16,11 +16,20 @@ use yii\web\View;
 use yii\helpers\Html;
 use yii\helpers\Json;
 use yii\web\JsExpression;
-use yii\base\Widget as elWidget;
+use yii\widgets\InputWidget as elWidget;
 
 class yii2bsduallistbox extends elWidget
 {
-
+    /**
+     * @var array listbox items
+     */
+    public $items = [];
+    
+    /**
+     * @var string|array selected items
+     */
+    public $selection;
+    
     /**
     * @var array options the HTML attributes (name-value pairs) for the field container tag.
     * The values will be HTML-encoded using [[Html::encode()]].
@@ -97,49 +106,34 @@ class yii2bsduallistbox extends elWidget
      */
     public function run()
     {   
-        $this->options['data-plugin-name'] = $this->_pluginName;
-
-        if (!isset($this->options['class'])) {
-            $this->options['class'] = 'duallistbox';
-        }
+        $this->registerClientScript();
         
-        echo Html::beginTag('div', $this->options) . "\n";
-            echo Html::beginTag('div',['class'=>'fc-loading','style' => 'display:none;']);
-                echo Html::encode($this->loading);
-            echo Html::endTag('div')."\n";
-        echo Html::endTag('div')."\n";
-        $this->registerPlugin();
+        Html::addCssClass($this->options, 'form-control');
+        
+        $this->options['data-plugin-name'] = $this->_pluginName;
+        $this->options['multiple'] = true;
+        
+        if ($this->hasModel()) {
+            return Html::activeListBox($this->model, $this->attribute, $this->items, $this->options);
+        } else {
+            return Html::listBox($this->name, $this->selection, $this->items, $this->options);
+        }
     }
 
     /**
     * Registers the FullCalendar javascript assets and builds the requiered js  for the widget and the related events
     */
-    protected function registerPlugin()
+    protected function registerClientScript()
     {        
-        $id = $this->options['id'];
         $view = $this->getView();
-
         /** @var \yii\web\AssetBundle $assetClass */
         $assets = CoreAsset::register($view);
 
+        $id = (array_key_exists('id', $this->options)) ? $this->options['id'] : Html::getInputId($this->model, $this->attribute);
+        
         $js = array();
-
-        if($this->ajaxEvents != NULL){
-            $this->clientOptions['events'] = $this->ajaxEvents;
-        }
-
         $cleanOptions = $this->getClientOptions();
         $js[] = "jQuery('#$id').bootstrapDualListbox($cleanOptions);";
-
-        //lets check if we have an event for the calendar...
-        if(count($this->events)>0)
-        {
-            foreach($this->events AS $event)
-            {
-                $jsonEvent = Json::encode($event);
-                $js[] = "jQuery('#$id').bootstrapDualListbox($jsonEvent,$isSticky);";
-            }
-        }
         
         $view->registerJs(implode("\n", $js),View::POS_READY);
     }
