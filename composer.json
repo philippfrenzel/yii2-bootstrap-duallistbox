@@ -27,6 +27,6 @@
 		"codeception/codeception": "*"
 	},
 	"autoload": {
-		"psr-4": { "net\\frenzel\\textareaautosize\\": "" }
+		"psr-4": { "net\\frenzel\\yii2bsduallistbox\\": "" }
 	}
 }
