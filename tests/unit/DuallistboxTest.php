@@ -1,8 +1,8 @@
 <?php
 
-namespace yii2fullcalendar\tests\unit;
+namespace net\frenzel\yii2bsduallistbox\tests\unit;
 
-use \yii2fullcalendar\yii2fullcalendar;
+use \net\frenzel\yii2bsduallistbox\yii2bsduallistbox;
 
 /**
  * This is MasonryTest unit test.
@@ -30,7 +30,7 @@ class FullcalendarTest extends \Codeception\TestCase\Test
      */
     protected function _before()
     {
-        $this->instance = new yii2fullcalendar();
+        $this->instance = new yii2bsduallistbox();
     }
 
     /**
